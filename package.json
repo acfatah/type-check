@@ -1,0 +1,46 @@
+{
+  "name": "@acfatah/type-check",
+  "type": "module",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Yet another type checking library.",
+  "author": "Achmad F. Ibrahim <acfatah@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/acfatah/type-check#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acfatah/type-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/acfatah/type-check/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitest",
+    "build": "vite build",
+    "lint": "eslint .",
+    "lint:file": "eslint --fix",
+    "lint:fix": "eslint --fix .",
+    "precommit": "npm run lint:fix",
+    "clean": "npx rimraf .nyc_output coverage dist",
+    "test": "npm run test:unit:coverage",
+    "test:unit": "vitest run",
+    "test:unit:coverage": "vitest run --coverage",
+    "update": "npm-check-updates --upgrade --silent --target semver && npm install --no-progress",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.18.1",
+    "@rushstack/eslint-patch": "^1.10.3",
+    "@vitest/coverage-istanbul": "^1.6.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-format": "^0.1.1",
+    "ncu": "^0.2.1",
+    "nyc": "^15.1.0",
+    "prettier": "^3.2.5",
+    "release-it": "^17.3.0",
+    "rimraf": "^5.0.7",
+    "simple-git-hooks": "^2.11.1",
+    "vitest": "^1.6.0"
+  }
+}
